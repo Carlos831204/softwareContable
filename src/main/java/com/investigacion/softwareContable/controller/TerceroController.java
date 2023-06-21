@@ -11,6 +11,7 @@ import java.util.List;
 
 @RestController
 @RequestMapping("/terceros")
+@CrossOrigin(origins = "http://localhost:4200")
 public class TerceroController {
     private final TerceroService terceroService;
 

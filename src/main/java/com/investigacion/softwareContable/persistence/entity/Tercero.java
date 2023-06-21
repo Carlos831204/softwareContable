@@ -15,4 +15,5 @@ public class Tercero {
     private String direccion;
     private String telefono;
     private String correo;
+
 }

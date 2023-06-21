@@ -10,6 +10,7 @@ import java.util.List;
 
 @RestController
 @RequestMapping("/asientocontable")
+@CrossOrigin(origins = "http://localhost:4200")
 public class AsientoContableController {
     private final AsientoContableService asientoContableService;
     public AsientoContableController(AsientoContableService asientoContableService) {
