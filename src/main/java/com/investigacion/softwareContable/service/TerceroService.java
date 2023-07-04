@@ -5,6 +5,7 @@ import com.investigacion.softwareContable.mapper.TerceroInDTOToTercero;
 import com.investigacion.softwareContable.persistence.entity.Tercero;
 import com.investigacion.softwareContable.persistence.repository.TerceroRepository;
 import com.investigacion.softwareContable.service.dto.TerceroInDto;
+import org.springframework.data.domain.Sort;
 import org.springframework.http.HttpStatus;
 import org.springframework.stereotype.Service;
 
@@ -26,7 +27,7 @@ public class TerceroService {
         return this.terceroRepository.save(tercero);
     }
     public List<Tercero> obtenerTerceros(){
-        return this.terceroRepository.findAll();
+        return this.terceroRepository.findAll(Sort.by(Sort.Direction.ASC, "nombre"));
     }
 
     public Tercero obtenerTerceroPorId(Integer id){

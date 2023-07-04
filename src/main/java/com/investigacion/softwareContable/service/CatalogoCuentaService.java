@@ -5,6 +5,7 @@ import com.investigacion.softwareContable.mapper.CatalogoCuentaInDtoToCatalogoCu
 import com.investigacion.softwareContable.persistence.entity.CatalogoCuenta;
 import com.investigacion.softwareContable.persistence.repository.CatalogoCuentaRepository;
 import com.investigacion.softwareContable.service.dto.CatalogoCuentaInDto;
+import org.springframework.data.domain.Sort;
 import org.springframework.http.HttpStatus;
 import org.springframework.stereotype.Service;
 
@@ -26,7 +27,7 @@ public class CatalogoCuentaService {
         return this.catalogoCuentaRepository.save(catalogoCuenta);
     }
     public List<CatalogoCuenta> obtenerCatalogoCuenta(){
-        return  this.catalogoCuentaRepository.findAll();
+        return  this.catalogoCuentaRepository.findAll(Sort.by(Sort.Direction.ASC, "codigoCuenta"));
     }
     public CatalogoCuenta obtenerCuentaCatalogoById(Integer id){
         return this.catalogoCuentaRepository.findById(id).get();

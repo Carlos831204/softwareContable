@@ -15,10 +15,15 @@ public class AsientoContable {
     private String codigoCuenta;
     private String nombreCuenta;
     private String tercero;
+    @Column(columnDefinition = "0.00")
     private Double debito;
+    @Column(columnDefinition = "0.00")
     private Double credito;
+    @Column(columnDefinition = "0.00")
     private Double saldoDebito;
+    @Column(columnDefinition = "0.00")
     private Double saldoCredito;
+    @Column(columnDefinition = "0.00")
     private Double diferenciaSaldo;
 
 }
